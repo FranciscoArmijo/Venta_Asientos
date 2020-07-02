@@ -43,19 +43,19 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(125, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(167, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 31);
+            this.label1.Size = new System.Drawing.Size(318, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Busca por rut en .txt";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.YellowGreen;
-            this.button1.Location = new System.Drawing.Point(200, 158);
+            this.button1.Location = new System.Drawing.Point(267, 194);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 45);
+            this.button1.Size = new System.Drawing.Size(189, 55);
             this.button1.TabIndex = 10;
             this.button1.Text = "BUSCAR";
             this.button1.UseVisualStyleBackColor = false;
@@ -67,19 +67,19 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(87, 93);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(116, 114);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 24);
+            this.label4.Size = new System.Drawing.Size(61, 29);
             this.label4.TabIndex = 9;
             this.label4.Text = "Rut: ";
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(151, 92);
+            this.textBox2.Location = new System.Drawing.Point(201, 113);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(247, 29);
+            this.textBox2.Size = new System.Drawing.Size(328, 34);
             this.textBox2.TabIndex = 8;
             this.textBox2.Tag = "";
             // 
@@ -87,10 +87,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.YellowGreen;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-2, -2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(-3, -2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(521, 76);
+            this.panel1.Size = new System.Drawing.Size(695, 94);
             this.panel1.TabIndex = 7;
             // 
             // label7
@@ -99,24 +99,25 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label7.Location = new System.Drawing.Point(74, 130);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(99, 160);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(358, 13);
+            this.label7.Size = new System.Drawing.Size(463, 17);
             this.label7.TabIndex = 13;
             this.label7.Text = "FORMATO DE RUT DEBE SER SIN PUNTO Y CON GUÍON 11111111-K";
             // 
             // buscaRut
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 215);
+            this.ClientSize = new System.Drawing.Size(671, 265);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "buscaRut";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "buscaRut";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -74,8 +74,8 @@ namespace PROG2EVA2FranciscoArmijo
                 {
                     rutverificado = true;
                     MessageBox.Show("El rut es correcto, puede ingresar", "Bienvenido ", MessageBoxButtons.OK);
-                    ventana_venta newventana = new ventana_venta(nombre, rut);
-                    newventana.Show();
+                    ventana_venta vent = new ventana_venta(nombre, rut);
+                    vent.Show();
 
                     this.Hide();
                 }
@@ -92,6 +92,11 @@ namespace PROG2EVA2FranciscoArmijo
         {
             textBox1.Text = "";
             textBox2.Text = "";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

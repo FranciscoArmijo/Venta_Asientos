@@ -58,7 +58,7 @@ namespace PROG2EVA2FranciscoArmijo
         {
             
             //se toman lso datos del formulario inicial
-            InitializeComponent();
+             InitializeComponent();
             nombreVendedor = nombre;
             rutVendedor = rut;
             labelVendedor.Text = nombreVendedor;
@@ -884,7 +884,7 @@ namespace PROG2EVA2FranciscoArmijo
         {
             USUARIO.DATEFIN = DateTime.Now;
 
-            StreamWriter escritor = File.AppendText("C:\\TXT\\VIGIAFRANCISCOARMIJO.txt");
+            StreamWriter escritor = File.AppendText("C:\\TXTS\\VIGIAFRANCISCOARMIJO.txt");
 
             foreach (CLASEEVALUA2FranciscoArmijo indice in log)
             {
@@ -902,7 +902,7 @@ namespace PROG2EVA2FranciscoArmijo
         private void button5_Click(object sender, EventArgs e)
         {
             string mensaje = "";
-            string[] lineas = File.ReadAllLines("C:\\TXT\\VIGIAFRANCISCOARMIJO.txt");
+            string[] lineas = File.ReadAllLines("C:\\TXTS\\VIGIAFRANCISCOARMIJO.txt");
             foreach (string indice in lineas)
             {
                 mensaje += indice + "\n";
@@ -916,6 +916,13 @@ namespace PROG2EVA2FranciscoArmijo
         {
             buscaRut buscar = new buscaRut();
             buscar.Show();
+        }
+
+        private void botonPerfil_Click(object sender, EventArgs e)
+        {
+            PERFILES perf = new PERFILES();
+            perf.Show();
+
         }
     }
 }
