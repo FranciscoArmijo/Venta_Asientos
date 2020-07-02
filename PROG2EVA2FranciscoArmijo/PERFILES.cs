@@ -134,5 +134,11 @@ namespace PROG2EVA2FranciscoArmijo
             dataPerfiles.DataSource = tabla_transito;
             objeto_conect.Close();
         }
+
+        private void botonAcciones_Click(object sender, EventArgs e)
+        {
+            Acciones nuevo = new Acciones();
+            nuevo.Show();
+        }
     }
 }

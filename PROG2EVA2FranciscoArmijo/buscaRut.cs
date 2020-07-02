@@ -72,7 +72,7 @@ namespace PROG2EVA2FranciscoArmijo
                 {
 
                     string mensaje = "";
-                    string[] lineas = File.ReadAllLines("C:\\TXT\\VIGIAFRANCISCOARMIJO.txt");
+                    string[] lineas = File.ReadAllLines("C:\\TXTS\\VIGIAFRANCISCOARMIJO.txt");
                     foreach (string indice in lineas)
                     {
                         string[] busqueda = indice.Split(',');

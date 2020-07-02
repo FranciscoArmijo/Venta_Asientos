@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Acciones.Designer.cs">
+      <DependentUpon>Acciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="asientoBus.cs" />
     <Compile Include="buscaRut.cs">
       <SubType>Form</SubType>
@@ -95,6 +101,9 @@
     <Compile Include="ventana_venta.Designer.cs">
       <DependentUpon>ventana_venta.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Acciones.resx">
+      <DependentUpon>Acciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="buscaRut.resx">
       <DependentUpon>buscaRut.cs</DependentUpon>
     </EmbeddedResource>
