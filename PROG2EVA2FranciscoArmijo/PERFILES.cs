@@ -26,7 +26,7 @@ namespace PROG2EVA2FranciscoArmijo
             objeto_conect.Open();
             tabla_transito.Clear();
             //Se buscan todos los valores de la tabla PERFILES
-            SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESFranciscoArmijo", objeto_conect);
+            SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESFranciscoArmijo ", objeto_conect);
             //Se llena la tabla temporal con los valores encontrados
             sentencia.Fill(tabla_transito);
             dataPerfiles.DataSource = tabla_transito;
@@ -104,15 +104,15 @@ namespace PROG2EVA2FranciscoArmijo
 
         private void botonBuscar_Click(object sender, EventArgs e)
         {
-            if (textPaterno.Text == "")
+            if (textPaterno.Text == "" || textClave.Text == "")
             {
-                MessageBox.Show("Debe ingresar un apellido paterno para la busqueda", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar un apelli do paterno y clave para la busqueda", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
                 tabla_transito.Clear();
                 objeto_conect.Open();
-                SqlDataAdapter buscar = new SqlDataAdapter("select * from PERFILESFranciscoArmijo where ApPat = '" + textPaterno.Text + "'", objeto_conect);
+                SqlDataAdapter buscar = new SqlDataAdapter("select * from PERFILESFranciscoArmijo where ApPat like '%" + textPaterno.Text + "%' and Clave = '"+ textClave.Text+"'", objeto_conect);
                 buscar.Fill(tabla_transito);
                 dataPerfiles.DataSource = tabla_transito;
                 objeto_conect.Close();
@@ -137,8 +137,7 @@ namespace PROG2EVA2FranciscoArmijo
 
         private void botonAcciones_Click(object sender, EventArgs e)
         {
-            Acciones nuevo = new Acciones();
-            nuevo.Show();
+           
         }
     }
 }

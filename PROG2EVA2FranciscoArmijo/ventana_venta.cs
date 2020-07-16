@@ -46,6 +46,9 @@ namespace PROG2EVA2FranciscoArmijo
 
         string nombreVendedor;
         string rutVendedor;
+        //se agregan dos nuevos parametros para el programa y se crean en el constructor
+        string claveVendedor;
+        int nivelVendedor;
 
         List<asientoBus> listanombres = new List<asientoBus>();
 
@@ -53,14 +56,16 @@ namespace PROG2EVA2FranciscoArmijo
 
         List<CLASEEVALUA2FranciscoArmijo> log = new List<CLASEEVALUA2FranciscoArmijo>();
 
-
-        public ventana_venta(string nombre, string rut)
+        //constructor
+        public ventana_venta(string nombre, string rut, string clave, int nivel)
         {
             
             //se toman lso datos del formulario inicial
              InitializeComponent();
             nombreVendedor = nombre;
             rutVendedor = rut;
+            claveVendedor = clave;
+            nivelVendedor = nivel;
             labelVendedor.Text = nombreVendedor;
             USUARIO.RUT = rutVendedor;
             USUARIO.DATEINICIO = DateTime.Now;
@@ -72,7 +77,14 @@ namespace PROG2EVA2FranciscoArmijo
 
         private void ventana_venta_Load(object sender, EventArgs e)
         {
-
+            if (nivelVendedor == 1)
+            {
+                botonPerfil.Enabled = true;
+            }
+            else
+            {
+                botonPerfil.Enabled = false;
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -907,9 +919,7 @@ namespace PROG2EVA2FranciscoArmijo
             {
                 mensaje += indice + "\n";
             }
-
             MessageBox.Show(mensaje);
-            
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -917,12 +927,17 @@ namespace PROG2EVA2FranciscoArmijo
             buscaRut buscar = new buscaRut();
             buscar.Show();
         }
-
         private void botonPerfil_Click(object sender, EventArgs e)
         {
-            PERFILES perf = new PERFILES();
-            perf.Show();
-
+            if (botonPerfil.Enabled == false)
+            {
+                MessageBox.Show("Este boton es activo solo para usiarios nivel 1", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                PERFILES perf = new PERFILES();
+                perf.Show();
+            }
         }
     }
 }

@@ -46,7 +46,8 @@
             this.botonEliminar = new System.Windows.Forms.Button();
             this.textClave = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.botonAcciones = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.botonModificar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataPerfiles)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +75,7 @@
             // botonBuscar
             // 
             this.botonBuscar.BackColor = System.Drawing.Color.YellowGreen;
-            this.botonBuscar.Location = new System.Drawing.Point(544, 190);
+            this.botonBuscar.Location = new System.Drawing.Point(544, 153);
             this.botonBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.botonBuscar.Name = "botonBuscar";
             this.botonBuscar.Size = new System.Drawing.Size(189, 55);
@@ -86,7 +87,7 @@
             // botonGuardar
             // 
             this.botonGuardar.BackColor = System.Drawing.Color.YellowGreen;
-            this.botonGuardar.Location = new System.Drawing.Point(544, 117);
+            this.botonGuardar.Location = new System.Drawing.Point(544, 96);
             this.botonGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(189, 55);
@@ -98,7 +99,7 @@
             // dataPerfiles
             // 
             this.dataPerfiles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataPerfiles.Location = new System.Drawing.Point(10, 340);
+            this.dataPerfiles.Location = new System.Drawing.Point(10, 366);
             this.dataPerfiles.Name = "dataPerfiles";
             this.dataPerfiles.RowHeadersWidth = 51;
             this.dataPerfiles.RowTemplate.Height = 24;
@@ -211,7 +212,7 @@
             // 
             this.botonEliminar.BackColor = System.Drawing.Color.IndianRed;
             this.botonEliminar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonEliminar.Location = new System.Drawing.Point(199, 278);
+            this.botonEliminar.Location = new System.Drawing.Point(544, 280);
             this.botonEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.botonEliminar.Name = "botonEliminar";
             this.botonEliminar.Size = new System.Drawing.Size(189, 55);
@@ -222,7 +223,7 @@
             // 
             // textClave
             // 
-            this.textClave.Location = new System.Drawing.Point(445, 307);
+            this.textClave.Location = new System.Drawing.Point(198, 284);
             this.textClave.Margin = new System.Windows.Forms.Padding(4);
             this.textClave.Name = "textClave";
             this.textClave.Size = new System.Drawing.Size(189, 22);
@@ -234,31 +235,42 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label7.Location = new System.Drawing.Point(408, 277);
+            this.label7.Location = new System.Drawing.Point(159, 321);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(272, 20);
             this.label7.TabIndex = 75;
             this.label7.Text = "Ingrese clave para eliminar registro";
             // 
-            // botonAcciones
+            // label8
             // 
-            this.botonAcciones.BackColor = System.Drawing.Color.RoyalBlue;
-            this.botonAcciones.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.botonAcciones.Location = new System.Drawing.Point(300, 547);
-            this.botonAcciones.Margin = new System.Windows.Forms.Padding(4);
-            this.botonAcciones.Name = "botonAcciones";
-            this.botonAcciones.Size = new System.Drawing.Size(189, 55);
-            this.botonAcciones.TabIndex = 76;
-            this.botonAcciones.Text = "ACCIONES";
-            this.botonAcciones.UseVisualStyleBackColor = false;
-            this.botonAcciones.Click += new System.EventHandler(this.botonAcciones_Click);
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label8.Location = new System.Drawing.Point(44, 286);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 20);
+            this.label8.TabIndex = 77;
+            this.label8.Text = "Clave: ";
+            // 
+            // botonModificar
+            // 
+            this.botonModificar.BackColor = System.Drawing.Color.YellowGreen;
+            this.botonModificar.Location = new System.Drawing.Point(544, 217);
+            this.botonModificar.Margin = new System.Windows.Forms.Padding(4);
+            this.botonModificar.Name = "botonModificar";
+            this.botonModificar.Size = new System.Drawing.Size(189, 55);
+            this.botonModificar.TabIndex = 78;
+            this.botonModificar.Text = "MODIFICAR";
+            this.botonModificar.UseVisualStyleBackColor = false;
             // 
             // PERFILES
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 608);
-            this.Controls.Add(this.botonAcciones);
+            this.ClientSize = new System.Drawing.Size(800, 629);
+            this.Controls.Add(this.botonModificar);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textClave);
             this.Controls.Add(this.botonEliminar);
@@ -308,6 +320,7 @@
         private System.Windows.Forms.Button botonEliminar;
         private System.Windows.Forms.TextBox textClave;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button botonAcciones;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button botonModificar;
     }
 }

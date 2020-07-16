@@ -22,7 +22,6 @@ namespace PROG2EVA2FranciscoArmijo
 
         string rut = "";
         string nombre = "";
-        bool rutverificado = false;
         string clave = "";
         int nivel = 0;
         private void button1_Click(object sender, EventArgs e)
@@ -34,66 +33,32 @@ namespace PROG2EVA2FranciscoArmijo
             }
             else
             {
-                //asignar variables
-                /*
-                rut = textBox2.Text;
-                nombre = textBox1.Text;
-                //validar rut
-                if (rut.Length < 10)
-                {
-                    while (rut.Length != 10)
-                    {
-                        rut = "0" + rut;
-                    }
-                }
-                double suma = 0;
-                double divisionDec = 0;
-                int divisionEnt = 0;
-                double valorDec = 0;
-                double resta11 = 0;
-                int digito = 0;
-                string digitok = "";
-                int[] constantes = { 3, 2, 7, 6, 5, 4, 3, 2 };
-                int[] rutarreglo;
-                rutarreglo = new int[8];
-                for (int i = 0; i < 8; i++)
-                {
-                    
-                    rutarreglo[i] = Int32.Parse(rut[i].ToString());
-                    suma = suma + (rutarreglo[i] * constantes[i]);
-                }
-                divisionDec = suma / 11;
-                divisionEnt = (int)divisionDec;
-                valorDec = divisionDec - divisionEnt;
-                resta11 = 11 - (11 * (valorDec));
-                digito = (int)Math.Round(resta11, 0);
-                if (digito == 10)
-                {
-                    digitok = "k";
-                }
-                if (digito == 11)
-                {
-                    digito = 0;
-                }*/
                 //no es necesario validar rut en el primer ingreso ya que los rut ya estan en las tablas
                 objeto_conect.Open();
                 tabla_transito.Clear();
                 SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESFranciscoArmijo where rut = '"+ textBox2.Text +"'", objeto_conect);
                 sentencia.Fill(tabla_transito);
-                if (Convert.ToString(digito) == Convert.ToString(rut[9]) || digitok == Convert.ToString(rut[9]))
+                if (tabla_transito.Rows.Count.Equals(0) )
                 {
-                    rutverificado = true;
-                    MessageBox.Show("El rut es correcto, puede ingresar", "Bienvenido ", MessageBoxButtons.OK);
-                    ventana_venta vent = new ventana_venta(nombre, rut, clave, nivel);
-                    vent.Show();
-
-                    this.Hide();
+                    MessageBox.Show("El rut no existe", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("El rut es incorrecto", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    rutverificado = false;
-
+                    if (tabla_transito.Rows[0]["Clave"].ToString() == textBox1.Text)
+                    {
+                        MessageBox.Show("Su usuario y clave son correctos, puede ingresar", "Bienvenido ", MessageBoxButtons.OK);
+                        nombre = tabla_transito.Rows[0]["Nombre"].ToString() + " " + tabla_transito.Rows[0]["ApPat"].ToString();
+                        rut = tabla_transito.Rows[0]["Rut"].ToString();
+                        clave = tabla_transito.Rows[0]["Clave"].ToString();
+                        nivel = Convert.ToInt32(tabla_transito.Rows[0]["NIVEL"]);
+                        ventana_venta vent = new ventana_venta(nombre, rut, clave, nivel);
+                        vent.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Credenciales incorrectas", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }

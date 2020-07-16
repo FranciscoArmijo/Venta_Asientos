@@ -99,6 +99,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.botonPerfil = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -750,7 +751,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.labelPasajeros);
             this.panel2.Controls.Add(this.label8);
-            this.panel2.Location = new System.Drawing.Point(389, 235);
+            this.panel2.Location = new System.Drawing.Point(389, 293);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(316, 412);
@@ -759,7 +760,7 @@
             // labelPasajeros
             // 
             this.labelPasajeros.AutoSize = true;
-            this.labelPasajeros.Location = new System.Drawing.Point(16, 71);
+            this.labelPasajeros.Location = new System.Drawing.Point(16, 45);
             this.labelPasajeros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPasajeros.Name = "labelPasajeros";
             this.labelPasajeros.Size = new System.Drawing.Size(0, 17);
@@ -786,16 +787,16 @@
             this.panel3.Controls.Add(this.pictureBox23);
             this.panel3.Controls.Add(this.pictureBox22);
             this.panel3.Controls.Add(this.label7);
-            this.panel3.Location = new System.Drawing.Point(391, 665);
+            this.panel3.Location = new System.Drawing.Point(391, 715);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(316, 130);
+            this.panel3.Size = new System.Drawing.Size(316, 100);
             this.panel3.TabIndex = 50;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(232, 14);
+            this.label10.Location = new System.Drawing.Point(232, 0);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(77, 17);
@@ -805,7 +806,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(113, 14);
+            this.label9.Location = new System.Drawing.Point(113, 0);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(93, 17);
@@ -815,7 +816,7 @@
             // Libre
             // 
             this.Libre.AutoSize = true;
-            this.Libre.Location = new System.Drawing.Point(29, 14);
+            this.Libre.Location = new System.Drawing.Point(29, 0);
             this.Libre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Libre.Name = "Libre";
             this.Libre.Size = new System.Drawing.Size(40, 17);
@@ -826,7 +827,7 @@
             // 
             this.pictureBox24.BackColor = System.Drawing.Color.PaleTurquoise;
             this.pictureBox24.Image = global::PROG2EVA2FranciscoArmijo.Properties.Resources.OCUPADO;
-            this.pictureBox24.Location = new System.Drawing.Point(231, 38);
+            this.pictureBox24.Location = new System.Drawing.Point(231, 24);
             this.pictureBox24.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox24.Name = "pictureBox24";
             this.pictureBox24.Size = new System.Drawing.Size(79, 68);
@@ -837,7 +838,7 @@
             // pictureBox23
             // 
             this.pictureBox23.Image = global::PROG2EVA2FranciscoArmijo.Properties.Resources.OCUPADO;
-            this.pictureBox23.Location = new System.Drawing.Point(119, 38);
+            this.pictureBox23.Location = new System.Drawing.Point(119, 24);
             this.pictureBox23.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox23.Name = "pictureBox23";
             this.pictureBox23.Size = new System.Drawing.Size(79, 68);
@@ -848,7 +849,7 @@
             // pictureBox22
             // 
             this.pictureBox22.Image = global::PROG2EVA2FranciscoArmijo.Properties.Resources.VACIO;
-            this.pictureBox22.Location = new System.Drawing.Point(8, 39);
+            this.pictureBox22.Location = new System.Drawing.Point(8, 25);
             this.pictureBox22.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox22.Name = "pictureBox22";
             this.pictureBox22.Size = new System.Drawing.Size(79, 68);
@@ -870,10 +871,10 @@
             this.button4.BackColor = System.Drawing.Color.OrangeRed;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button4.Location = new System.Drawing.Point(227, 809);
+            this.button4.Location = new System.Drawing.Point(227, 821);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(259, 50);
+            this.button4.Size = new System.Drawing.Size(259, 38);
             this.button4.TabIndex = 51;
             this.button4.Text = "CERRAR SESIÓN";
             this.button4.UseVisualStyleBackColor = false;
@@ -884,10 +885,10 @@
             this.button5.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button5.Location = new System.Drawing.Point(495, 809);
+            this.button5.Location = new System.Drawing.Point(495, 821);
             this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(213, 50);
+            this.button5.Size = new System.Drawing.Size(213, 38);
             this.button5.TabIndex = 52;
             this.button5.Text = "MUESTRA TODO";
             this.button5.UseVisualStyleBackColor = false;
@@ -898,10 +899,10 @@
             this.button6.BackColor = System.Drawing.Color.PaleGoldenrod;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button6.Location = new System.Drawing.Point(5, 809);
+            this.button6.Location = new System.Drawing.Point(5, 821);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(213, 50);
+            this.button6.Size = new System.Drawing.Size(213, 38);
             this.button6.TabIndex = 53;
             this.button6.Text = "BUSCAR";
             this.button6.UseVisualStyleBackColor = false;
@@ -910,6 +911,7 @@
             // botonPerfil
             // 
             this.botonPerfil.BackColor = System.Drawing.Color.YellowGreen;
+            this.botonPerfil.Enabled = false;
             this.botonPerfil.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonPerfil.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.botonPerfil.Location = new System.Drawing.Point(389, 177);
@@ -921,11 +923,26 @@
             this.botonPerfil.UseVisualStyleBackColor = false;
             this.botonPerfil.Click += new System.EventHandler(this.botonPerfil_Click);
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button7.Enabled = false;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button7.Location = new System.Drawing.Point(388, 235);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(319, 50);
+            this.button7.TabIndex = 55;
+            this.button7.Text = "ACCIONES";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
             // ventana_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 865);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.botonPerfil);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -1095,5 +1112,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button botonPerfil;
+        private System.Windows.Forms.Button button7;
     }
 }
