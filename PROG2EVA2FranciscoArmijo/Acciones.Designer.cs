@@ -31,10 +31,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.botonTraspasar = new System.Windows.Forms.Button();
-            this.botonBuscar = new System.Windows.Forms.Button();
             this.dataAcciones = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textRut = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataAcciones)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +66,7 @@
             this.botonTraspasar.BackColor = System.Drawing.Color.YellowGreen;
             this.botonTraspasar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonTraspasar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.botonTraspasar.Location = new System.Drawing.Point(13, 97);
+            this.botonTraspasar.Location = new System.Drawing.Point(258, 97);
             this.botonTraspasar.Margin = new System.Windows.Forms.Padding(4);
             this.botonTraspasar.Name = "botonTraspasar";
             this.botonTraspasar.Size = new System.Drawing.Size(319, 50);
@@ -74,20 +74,6 @@
             this.botonTraspasar.Text = "TRASPASAR A TABLA";
             this.botonTraspasar.UseVisualStyleBackColor = false;
             this.botonTraspasar.Click += new System.EventHandler(this.botonTraspasar_Click);
-            // 
-            // botonBuscar
-            // 
-            this.botonBuscar.BackColor = System.Drawing.Color.YellowGreen;
-            this.botonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.botonBuscar.Location = new System.Drawing.Point(13, 155);
-            this.botonBuscar.Margin = new System.Windows.Forms.Padding(4);
-            this.botonBuscar.Name = "botonBuscar";
-            this.botonBuscar.Size = new System.Drawing.Size(319, 70);
-            this.botonBuscar.TabIndex = 61;
-            this.botonBuscar.Text = "BUSCAR PARA TRASPASO";
-            this.botonBuscar.UseVisualStyleBackColor = false;
-            this.botonBuscar.Click += new System.EventHandler(this.botonBuscar_Click);
             // 
             // dataAcciones
             // 
@@ -99,35 +85,49 @@
             this.dataAcciones.Size = new System.Drawing.Size(825, 162);
             this.dataAcciones.TabIndex = 62;
             // 
-            // label5
+            // button1
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label5.Location = new System.Drawing.Point(14, 238);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 20);
-            this.label5.TabIndex = 64;
-            this.label5.Text = "Rut: ";
+            this.button1.BackColor = System.Drawing.Color.YellowGreen;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(258, 218);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(319, 50);
+            this.button1.TabIndex = 64;
+            this.button1.Text = "BUSCAR POR FECHA";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textRut
+            // label6
             // 
-            this.textRut.Location = new System.Drawing.Point(80, 237);
-            this.textRut.Margin = new System.Windows.Forms.Padding(4);
-            this.textRut.Name = "textRut";
-            this.textRut.Size = new System.Drawing.Size(251, 22);
-            this.textRut.TabIndex = 63;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label6.Location = new System.Drawing.Point(261, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(313, 20);
+            this.label6.TabIndex = 65;
+            this.label6.Text = "Selecciona una fecha de inicio de sesión";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(265, 187);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(309, 22);
+            this.dateTimePicker1.TabIndex = 66;
             // 
             // Acciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(849, 450);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.textRut);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataAcciones);
-            this.Controls.Add(this.botonBuscar);
             this.Controls.Add(this.botonTraspasar);
             this.Controls.Add(this.panel1);
             this.Name = "Acciones";
@@ -146,9 +146,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button botonTraspasar;
-        private System.Windows.Forms.Button botonBuscar;
         private System.Windows.Forms.DataGridView dataAcciones;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textRut;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
