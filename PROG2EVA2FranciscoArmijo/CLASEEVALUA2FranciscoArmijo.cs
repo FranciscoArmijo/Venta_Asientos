@@ -13,19 +13,28 @@ namespace PROG2EVA2FranciscoArmijo
         private DateTime FinSesion;
         private string Accion;
         private DateTime AccionF;
+        private string clave;
 
         public CLASEEVALUA2FranciscoArmijo()
         {
             this.rut = "";
             this.Accion = "";
+            this.clave = "";
         }
 
+       
+        
         public string RUT
         {
             get { return rut; }
             set { this.rut = value; }
         }
 
+        public string CLAVE
+        {
+            get { return clave; }
+            set { this.clave = value; }
+        }
         public DateTime DATEINICIO
         {
             get { return InicioSesion; }

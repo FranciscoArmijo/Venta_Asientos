@@ -99,7 +99,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.botonPerfil = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.botonAcciones = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -923,26 +923,26 @@
             this.botonPerfil.UseVisualStyleBackColor = false;
             this.botonPerfil.Click += new System.EventHandler(this.botonPerfil_Click);
             // 
-            // button7
+            // botonAcciones
             // 
-            this.button7.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button7.Enabled = false;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button7.Location = new System.Drawing.Point(388, 235);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(319, 50);
-            this.button7.TabIndex = 55;
-            this.button7.Text = "ACCIONES";
-            this.button7.UseVisualStyleBackColor = false;
+            this.botonAcciones.BackColor = System.Drawing.Color.RoyalBlue;
+            this.botonAcciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonAcciones.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.botonAcciones.Location = new System.Drawing.Point(388, 235);
+            this.botonAcciones.Margin = new System.Windows.Forms.Padding(4);
+            this.botonAcciones.Name = "botonAcciones";
+            this.botonAcciones.Size = new System.Drawing.Size(319, 50);
+            this.botonAcciones.TabIndex = 55;
+            this.botonAcciones.Text = "ACCIONES";
+            this.botonAcciones.UseVisualStyleBackColor = false;
+            this.botonAcciones.Click += new System.EventHandler(this.botonAcciones_Click);
             // 
             // ventana_venta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 865);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.botonAcciones);
             this.Controls.Add(this.botonPerfil);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -1112,6 +1112,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button botonPerfil;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button botonAcciones;
     }
 }

@@ -20,10 +20,39 @@ namespace PROG2EVA2FranciscoArmijo
         }
         SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\basesLeones\BDDPROG2FranciscoArmijo.mdf;Integrated Security=True;Connect Timeout=30");
         DataTable tabla_transito = new DataTable();
-
+        string nombreVendedor;
+        int nivelVendedor;
+        string rutVendedor;
+        string claveVendedor;
         private void Acciones_Load(object sender, EventArgs e)
         {
+            if (nivelVendedor == 1)
+            {
+                objeto_conect.Open();
+                SqlDataAdapter sentencia2 = new SqlDataAdapter("select * from ACCIONESFranciscoArmijo", objeto_conect);
+                //Se llena la tabla temporal con los valores encontrados
+                sentencia2.Fill(tabla_transito);
+                dataAcciones.DataSource = tabla_transito;
+                objeto_conect.Close();
+            }
+            else
+            {
+                objeto_conect.Open();
+                SqlDataAdapter sentencia2 = new SqlDataAdapter("select * from ACCIONESFranciscoArmijo where Clave = '"+claveVendedor+"'", objeto_conect);
+                //Se llena la tabla temporal con los valores encontrados
+                sentencia2.Fill(tabla_transito);
+                dataAcciones.DataSource = tabla_transito;
+                objeto_conect.Close();
 
+            }
+        }
+        public Acciones(string nombre, string rut, int nivel, string clave)
+        {
+            InitializeComponent();
+            nombreVendedor = nombre;
+            rutVendedor = rut;
+            nivelVendedor = nivel;
+            claveVendedor = clave;
         }
 
         private void botonTraspasar_Click(object sender, EventArgs e)
@@ -35,7 +64,7 @@ namespace PROG2EVA2FranciscoArmijo
                 if (acciones.Length >1)
                 {
                     objeto_conect.Open();
-                    string sqlinsertar = "INSERT INTO ACCIONESFranciscoArmijo(Clave, InicioSesion, FinSesion,Accion,AccionF) values ('','" + acciones[1] + "','" + acciones[2] + "','" + acciones[3] + "','" + acciones[4] + "') ";
+                    string sqlinsertar = "INSERT INTO ACCIONESFranciscoArmijo(Clave, InicioSesion, FinSesion,Accion,AccionF) values ('"+acciones[0]+"','" + acciones[1] + "','" + acciones[2] + "','" + acciones[3] + "','" + acciones[4] + "') ";
                     SqlDataAdapter sentencia = new SqlDataAdapter(sqlinsertar, objeto_conect);
                     tabla_transito.Clear();
                     sentencia.Fill(tabla_transito);

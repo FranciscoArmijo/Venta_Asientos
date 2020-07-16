@@ -67,6 +67,7 @@ namespace PROG2EVA2FranciscoArmijo
             claveVendedor = clave;
             nivelVendedor = nivel;
             labelVendedor.Text = nombreVendedor;
+            USUARIO.CLAVE = claveVendedor;
             USUARIO.RUT = rutVendedor;
             USUARIO.DATEINICIO = DateTime.Now;
             USUARIO.ACCION = "Inicio Sesión";
@@ -902,7 +903,7 @@ namespace PROG2EVA2FranciscoArmijo
             {
                 //se llama al metodo writeline y se actualiza si este existe
                 //
-                escritor.WriteLine(USUARIO.RUT + "," + USUARIO.DATEINICIO + "," + USUARIO.DATEFIN + "," + indice.ACCION + "," + indice.DATEACCION ); 
+                escritor.WriteLine(USUARIO.CLAVE + "," + USUARIO.DATEINICIO + "," + USUARIO.DATEFIN + "," + indice.ACCION + "," + indice.DATEACCION ); 
             }
             escritor.Close();
 
@@ -938,6 +939,12 @@ namespace PROG2EVA2FranciscoArmijo
                 PERFILES perf = new PERFILES();
                 perf.Show();
             }
+        }
+
+        private void botonAcciones_Click(object sender, EventArgs e)
+        {
+            Acciones aci = new Acciones(nombreVendedor, rutVendedor, nivelVendedor, claveVendedor);
+            aci.Show();
         }
     }
 }

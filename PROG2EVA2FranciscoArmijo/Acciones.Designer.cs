@@ -66,7 +66,7 @@
             this.botonTraspasar.BackColor = System.Drawing.Color.YellowGreen;
             this.botonTraspasar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonTraspasar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.botonTraspasar.Location = new System.Drawing.Point(264, 100);
+            this.botonTraspasar.Location = new System.Drawing.Point(13, 97);
             this.botonTraspasar.Margin = new System.Windows.Forms.Padding(4);
             this.botonTraspasar.Name = "botonTraspasar";
             this.botonTraspasar.Size = new System.Drawing.Size(319, 50);
@@ -80,7 +80,7 @@
             this.botonBuscar.BackColor = System.Drawing.Color.YellowGreen;
             this.botonBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.botonBuscar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.botonBuscar.Location = new System.Drawing.Point(264, 158);
+            this.botonBuscar.Location = new System.Drawing.Point(13, 155);
             this.botonBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.botonBuscar.Name = "botonBuscar";
             this.botonBuscar.Size = new System.Drawing.Size(319, 70);
@@ -105,7 +105,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label5.Location = new System.Drawing.Point(265, 241);
+            this.label5.Location = new System.Drawing.Point(14, 238);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(45, 20);
             this.label5.TabIndex = 64;
@@ -113,7 +113,7 @@
             // 
             // textRut
             // 
-            this.textRut.Location = new System.Drawing.Point(331, 240);
+            this.textRut.Location = new System.Drawing.Point(80, 237);
             this.textRut.Margin = new System.Windows.Forms.Padding(4);
             this.textRut.Name = "textRut";
             this.textRut.Size = new System.Drawing.Size(251, 22);

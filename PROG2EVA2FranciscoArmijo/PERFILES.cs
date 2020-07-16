@@ -21,7 +21,7 @@ namespace PROG2EVA2FranciscoArmijo
         SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\basesLeones\BDDPROG2FranciscoArmijo.mdf;Integrated Security=True;Connect Timeout=30");
         DataTable tabla_transito = new DataTable();
 
-        private void PERFILES_Load(object sender, EventArgs e)
+        private void cargardata()
         {
             objeto_conect.Open();
             tabla_transito.Clear();
@@ -31,6 +31,21 @@ namespace PROG2EVA2FranciscoArmijo
             sentencia.Fill(tabla_transito);
             dataPerfiles.DataSource = tabla_transito;
             objeto_conect.Close();
+        }
+
+        private void limpiartext()
+        {
+            textNombre.Text = "";
+            textPaterno.Text = "";
+            textMaterno.Text = "";
+            textRut.Text = "";
+            textNivel.Text = "";
+            textClave.Text = "";
+        }
+
+        private void PERFILES_Load(object sender, EventArgs e)
+        {
+            cargardata();
         }
 
         private void botonGuardar_Click(object sender, EventArgs e)
@@ -94,6 +109,7 @@ namespace PROG2EVA2FranciscoArmijo
                     sentencia2.Fill(tabla_transito);
                     dataPerfiles.DataSource = tabla_transito;
                     objeto_conect.Close();
+                    limpiartext();
                 }
                 else
                 {
@@ -106,15 +122,23 @@ namespace PROG2EVA2FranciscoArmijo
         {
             if (textPaterno.Text == "" || textClave.Text == "")
             {
-                MessageBox.Show("Debe ingresar un apelli do paterno y clave para la busqueda", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar un apellido paterno y clave para la busqueda", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                textRut.Enabled = false;
                 tabla_transito.Clear();
                 objeto_conect.Open();
                 SqlDataAdapter buscar = new SqlDataAdapter("select * from PERFILESFranciscoArmijo where ApPat like '%" + textPaterno.Text + "%' and Clave = '"+ textClave.Text+"'", objeto_conect);
                 buscar.Fill(tabla_transito);
+                //se llenan los textbox con los datos de las tablas
                 dataPerfiles.DataSource = tabla_transito;
+                textNombre.Text = tabla_transito.Rows[0]["Nombre"].ToString();
+                textPaterno.Text = tabla_transito.Rows[0]["ApPat"].ToString();
+                textMaterno.Text = tabla_transito.Rows[0]["ApMat"].ToString();
+                textRut.Text = tabla_transito.Rows[0]["Rut"].ToString();
+                textNivel.Text = tabla_transito.Rows[0]["NIVEL"].ToString();
+                textClave.Text = tabla_transito.Rows[0]["Clave"].ToString();
                 objeto_conect.Close();
             }
             
@@ -122,6 +146,7 @@ namespace PROG2EVA2FranciscoArmijo
 
         private void botonEliminar_Click(object sender, EventArgs e)
         {
+            textRut.Enabled = true;
             tabla_transito.Clear();
             objeto_conect.Open();
             SqlDataAdapter eliminar = new SqlDataAdapter("DELETE from PERFILESFranciscoArmijo where Clave = '" + textClave.Text+ "'", objeto_conect);
@@ -133,11 +158,30 @@ namespace PROG2EVA2FranciscoArmijo
             sentencia2.Fill(tabla_transito);
             dataPerfiles.DataSource = tabla_transito;
             objeto_conect.Close();
+            limpiartext();
         }
 
         private void botonAcciones_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void botonModificar_Click(object sender, EventArgs e)
+        {
+            textRut.Enabled = true;
+            tabla_transito.Clear();
+            objeto_conect.Open();
+            SqlDataAdapter update = new SqlDataAdapter("update PERFILESFranciscoArmijo set Rut = '" + textRut.Text + "', Nombre = '" + textNombre.Text + "', ApPat = '"+ textPaterno.Text+"', ApMat = '"+textMaterno.Text+"', NIVEL = "+ textNivel.Text+"where Clave ='"+textClave.Text+"'", objeto_conect);
+            update.Fill(tabla_transito);
+            objeto_conect.Close();
+            cargardata();
+            limpiartext();
+        }
+
+        private void botonLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiartext();
+            textRut.Enabled = true;
         }
     }
 }

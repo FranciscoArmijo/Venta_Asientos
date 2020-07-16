@@ -2,3 +2,4 @@
 DELETE FROM PERFILESFranciscoArmijo WHERE NOmbre = 'Ricardo';
 
 select * from PERFILESFranciscoArmijo where Clave = 'RTC13506481-5' and ApPat like '%Ta%';
+ DELETE FROM ACCIONESFranciscoArmijo;
