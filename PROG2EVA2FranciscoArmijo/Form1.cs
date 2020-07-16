@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace PROG2EVA2FranciscoArmijo
 {
@@ -16,10 +17,14 @@ namespace PROG2EVA2FranciscoArmijo
         {
             InitializeComponent();
         }
+        SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\basesLeones\BDDPROG2FranciscoArmijo.mdf;Integrated Security=True;Connect Timeout=30");
+        DataTable tabla_transito = new DataTable();
 
         string rut = "";
         string nombre = "";
         bool rutverificado = false;
+        string clave = "";
+        int nivel = 0;
         private void button1_Click(object sender, EventArgs e)
         {
             //validadores
@@ -30,7 +35,7 @@ namespace PROG2EVA2FranciscoArmijo
             else
             {
                 //asignar variables
-                
+                /*
                 rut = textBox2.Text;
                 nombre = textBox1.Text;
                 //validar rut
@@ -69,12 +74,17 @@ namespace PROG2EVA2FranciscoArmijo
                 if (digito == 11)
                 {
                     digito = 0;
-                }
+                }*/
+                //no es necesario validar rut en el primer ingreso ya que los rut ya estan en las tablas
+                objeto_conect.Open();
+                tabla_transito.Clear();
+                SqlDataAdapter sentencia = new SqlDataAdapter("select * from PERFILESFranciscoArmijo where rut = '"+ textBox2.Text +"'", objeto_conect);
+                sentencia.Fill(tabla_transito);
                 if (Convert.ToString(digito) == Convert.ToString(rut[9]) || digitok == Convert.ToString(rut[9]))
                 {
                     rutverificado = true;
                     MessageBox.Show("El rut es correcto, puede ingresar", "Bienvenido ", MessageBoxButtons.OK);
-                    ventana_venta vent = new ventana_venta(nombre, rut);
+                    ventana_venta vent = new ventana_venta(nombre, rut, clave, nivel);
                     vent.Show();
 
                     this.Hide();

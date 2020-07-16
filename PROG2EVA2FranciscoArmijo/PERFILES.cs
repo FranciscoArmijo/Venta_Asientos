@@ -17,7 +17,7 @@ namespace PROG2EVA2FranciscoArmijo
         {
             InitializeComponent();
         }
-
+        //prueba
         SqlConnection objeto_conect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\basesLeones\BDDPROG2FranciscoArmijo.mdf;Integrated Security=True;Connect Timeout=30");
         DataTable tabla_transito = new DataTable();
 

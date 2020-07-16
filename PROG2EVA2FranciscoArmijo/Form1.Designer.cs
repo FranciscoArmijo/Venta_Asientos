@@ -74,16 +74,16 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Location = new System.Drawing.Point(101, 98);
+            this.label2.Location = new System.Drawing.Point(120, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(436, 25);
+            this.label2.Size = new System.Drawing.Size(416, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Favor ingrese su nombre y rut para iniciar seción.";
+            this.label2.Text = "Favor ingrese su rut y clave para iniciar seción.";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(225, 155);
+            this.textBox1.Location = new System.Drawing.Point(225, 201);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(328, 34);
@@ -92,7 +92,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(225, 204);
+            this.textBox2.Location = new System.Drawing.Point(225, 146);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(328, 34);
@@ -105,11 +105,11 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label3.Location = new System.Drawing.Point(101, 156);
+            this.label3.Location = new System.Drawing.Point(101, 202);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 29);
+            this.label3.Size = new System.Drawing.Size(86, 29);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Nombre: ";
+            this.label3.Text = "Clave: ";
             // 
             // label4
             // 
@@ -117,7 +117,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label4.Location = new System.Drawing.Point(104, 207);
+            this.label4.Location = new System.Drawing.Point(104, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 29);
             this.label4.TabIndex = 5;

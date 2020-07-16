@@ -1,1 +1,1 @@
-﻿delete from ACCIONESFranciscoArmijo;
+﻿select * from ACCIONESFranciscoArmijo;
