@@ -207,6 +207,7 @@
             this.textRut.Name = "textRut";
             this.textRut.Size = new System.Drawing.Size(189, 22);
             this.textRut.TabIndex = 61;
+            this.textRut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRut_KeyPress);
             // 
             // botonEliminar
             // 

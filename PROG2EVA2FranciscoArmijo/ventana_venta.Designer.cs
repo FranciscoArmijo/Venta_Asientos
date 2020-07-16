@@ -156,6 +156,7 @@
             this.textRut.Name = "textRut";
             this.textRut.Size = new System.Drawing.Size(265, 22);
             this.textRut.TabIndex = 2;
+            this.textRut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textRut_KeyPress);
             // 
             // labelSilla1
             // 
