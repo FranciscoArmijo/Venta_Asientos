@@ -35,6 +35,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.botonFrecuencia = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataAcciones)).BeginInit();
             this.SuspendLayout();
@@ -119,11 +120,26 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(309, 22);
             this.dateTimePicker1.TabIndex = 66;
             // 
+            // botonFrecuencia
+            // 
+            this.botonFrecuencia.BackColor = System.Drawing.Color.YellowGreen;
+            this.botonFrecuencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonFrecuencia.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.botonFrecuencia.Location = new System.Drawing.Point(258, 459);
+            this.botonFrecuencia.Margin = new System.Windows.Forms.Padding(4);
+            this.botonFrecuencia.Name = "botonFrecuencia";
+            this.botonFrecuencia.Size = new System.Drawing.Size(319, 50);
+            this.botonFrecuencia.TabIndex = 67;
+            this.botonFrecuencia.Text = "FRECUENCIA";
+            this.botonFrecuencia.UseVisualStyleBackColor = false;
+            this.botonFrecuencia.Click += new System.EventHandler(this.botonFrecuencia_Click);
+            // 
             // Acciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(849, 450);
+            this.ClientSize = new System.Drawing.Size(849, 525);
+            this.Controls.Add(this.botonFrecuencia);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
@@ -150,5 +166,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button botonFrecuencia;
     }
 }

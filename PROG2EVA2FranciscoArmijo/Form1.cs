@@ -60,6 +60,7 @@ namespace PROG2EVA2FranciscoArmijo
                         MessageBox.Show("Credenciales incorrectas", "Error ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                objeto_conect.Close();
             }
         }
 
@@ -72,6 +73,35 @@ namespace PROG2EVA2FranciscoArmijo
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var cantidad = this.textBox2.TextLength.ToString();
+            var cantidad2 = Convert.ToInt32(cantidad);
+            if (cantidad2 <= 7)
+            {
+                string cadena = "1234567890" + (char)8;
+
+                if (!cadena.Contains(e.KeyChar))
+                {
+
+                    e.Handled = true;
+
+                }
+            }
+            else
+            {
+
+                string cadena = "-Kk1234567890" + (char)8;
+
+                if (!cadena.Contains(e.KeyChar))
+                {
+
+                    e.Handled = true;
+
+                }
+            }
         }
     }
 }

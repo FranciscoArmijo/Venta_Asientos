@@ -95,5 +95,11 @@ namespace PROG2EVA2FranciscoArmijo
             dataAcciones.DataSource = tabla_transito;
             objeto_conect.Close();
         }
+
+        private void botonFrecuencia_Click(object sender, EventArgs e)
+        {
+            Frecuencia frec = new Frecuencia();
+            frec.Show();
+        }
     }
 }
